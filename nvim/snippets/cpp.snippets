@@ -1,0 +1,480 @@
+snippet main1
+	#include <bits/stdc++.h>
+
+	using namespace std;
+
+	void debug(int x) { cerr << x; }
+	void debug(long x) { cerr << x; }
+	void debug(long long x) { cerr << x; }
+	void debug(unsigned x) { cerr << x; }
+	void debug(unsigned long x) { cerr << x; }
+	void debug(unsigned long long x) { cerr << x; }
+	void debug(float x) { cerr << x; }
+	void debug(double x) { cerr << x; }
+	void debug(long double x) { cerr << x; }
+	void debug(char x) { cerr << '\'' << x << '\''; }
+	void debug(const char *x) { cerr << '\"' << x << '\"'; }
+	void debug(const string &x) { cerr << '\"' << x << '\"'; }
+	void debug(bool x) { cerr << (x ? "true" : "false"); }
+
+	template <typename T, typename V> void debug(const pair<T, V> &x);
+	template <typename T> void debug(const T &x) {
+		int comma = 0;
+		cerr << '{';
+		for (auto &i : x)
+			cerr << (comma++ ? ", " : ""), debug(i);
+		cerr << "}";
+	}
+	template <typename T, typename V> void debug(const pair<T, V> &x) {
+		cerr << '{';
+		debug(x.first);
+		cerr << ", ";
+		debug(x.second);
+		cerr << '}';
+	}
+	template <typename T> void debug(stack<T> st) {
+		cerr << " ";
+		while (!st.empty()) {
+			cerr << debug(st.top()) << " ";
+			debug(st.pop());
+		}
+	}
+	template <typename T> void debug(queue<T> que) {
+		while (!que.empty()) {
+			cerr << debug(que.front()) << " ";
+			debug(que.pop());
+		}
+	}
+	template <typename T> void debug(deque<T> dque) {
+		while (!dque.empty()) {
+			cerr << debug(dque.front()) << " ";
+			debug(dque.pop_front());
+		}
+	}
+	void dbg() { cerr << "]\n"; }
+	template <typename T, typename... V> void dbg(T t, V... v) {
+		debug(t);
+		if (sizeof...(v))
+			cerr << ", ";
+		dbg(v...);
+	}
+
+	#ifdef DEBUG
+	#define dbg(x...) cerr << "\e[34m" << __func__ << ":" << __LINE__ << " [" << #x << "]\e[39m = \e[32m[";dbg(x);cerr << "\e[39m" << endl;
+	#else
+	#define dbg(x...) 32
+	#endif
+	#define endl "\n"
+	#define len(x) (int)(x).size()
+
+	void test_case() { 
+		$1
+	}
+
+	int main() {
+		ios_base::sync_with_stdio(false);
+		cin.tie(nullptr);
+		int tests = 1;
+		cin >> tests;
+
+		for (int i = 1; i <= tests; i++) {
+			// cout << "Case #" << i << ": ";
+			test_case();
+		}
+		return 0;
+	}
+
+snippet main2
+	#include <bits/stdc++.h>
+
+	using namespace std;
+
+	void debug(int x) { cerr << x; }
+	void debug(long x) { cerr << x; }
+	void debug(long long x) { cerr << x; }
+	void debug(unsigned x) { cerr << x; }
+	void debug(unsigned long x) { cerr << x; }
+	void debug(unsigned long long x) { cerr << x; }
+	void debug(float x) { cerr << x; }
+	void debug(double x) { cerr << x; }
+	void debug(long double x) { cerr << x; }
+	void debug(char x) { cerr << '\'' << x << '\''; }
+	void debug(const char *x) { cerr << '\"' << x << '\"'; }
+	void debug(const string &x) { cerr << '\"' << x << '\"'; }
+	void debug(bool x) { cerr << (x ? "true" : "false"); }
+
+	template <typename T, typename V> void debug(const pair<T, V> &x);
+	template <typename T> void debug(const T &x) {
+		int comma = 0;
+		cerr << '{';
+		for (auto &i : x)
+			cerr << (comma++ ? ", " : ""), debug(i);
+		cerr << "}";
+	}
+	template <typename T, typename V> void debug(const pair<T, V> &x) {
+		cerr << '{';
+		debug(x.first);
+		cerr << ", ";
+		debug(x.second);
+		cerr << '}';
+	}
+	template <typename T> void debug(stack<T> st) {
+		cerr << " ";
+		while (!st.empty()) {
+			cerr << debug(st.top()) << " ";
+			debug(st.pop());
+		}
+	}
+	template <typename T> void debug(queue<T> que) {
+		while (!que.empty()) {
+			cerr << debug(que.front()) << " ";
+			debug(que.pop());
+		}
+	}
+	template <typename T> void debug(deque<T> dque) {
+		while (!dque.empty()) {
+			cerr << debug(dque.front()) << " ";
+			debug(dque.pop_front());
+		}
+	}
+	void dbg() { cerr << "]\n"; }
+	template <typename T, typename... V> void dbg(T t, V... v) {
+		debug(t);
+		if (sizeof...(v))
+			cerr << ", ";
+		dbg(v...);
+	}
+
+	#ifdef DEBUG
+	#define dbg(x...) cerr << "\e[34m" << __func__ << ":" << __LINE__ << " [" << #x << "]\e[39m = \e[32m[";dbg(x);cerr << "\e[39m" << endl;
+	#else
+	#define dbg(x...) 32
+	#endif
+	#define endl "\n"
+	#define len(x) (int)(x).size()
+
+	int main() {
+		ios_base::sync_with_stdio(false);
+		cin.tie(nullptr);
+
+		$1
+		// cout << "Case #" << i << ": ";
+
+		return 0;
+	}
+
+snippet generator
+	
+	#include <bits/stdc++.h>
+	using namespace std;
+
+	#define uid(low, high)  uniform_int_distribution<>(low, high)(rng)
+	mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
+
+	void print(){cout << "\n";}template<typename T, typename...types> void print(const T& first, const types&...args) {cout << first << " "; print(args...);}
+
+	int main() {
+		$1
+		return 0;
+	}
+
+snippet knapsack
+	vector<vector<int>> dp(100, vector<int>(100, -1));
+
+	int knapsack(int index, int remaining_weight, vector<int>& weights, vector<int>& values) {
+		/* Base conditions:
+		 * 1. When knapsack is full.
+		 * 2. When items are finished.
+		 */
+
+		if (remaining_weight == 0) return 0;
+		if (index < 0) return 0;
+		if (dp[index][remaining_weight] != -1) return dp[index][remaining_weight];
+
+		// Not choose
+		int ans = knapsack(index - 1, remaining_weight, weights, values);
+
+		// Choose if knapsack has enough space
+		if (remaining_weight - weights[index] >= 0)
+			ans = max(ans, knapsack(index - 1, remaining_weight - weights[index], weights, values) + values[index]);
+
+		return dp[index][remaining_weight] = ans;
+	}
+
+snippet ispalindrome
+	template<typename T> bool isPalindrome(T conatiner) {
+		int low = 0, high = conatiner.size() - 1;
+
+		while(low < high) {
+			if (conatiner[low] != conatiner[high]) return false;
+			low++, high--;
+		}
+
+		return true;
+	}
+
+snippet fenwick_tree
+	struct FenwickTree {
+			vector<int> bit;
+			int n;
+
+			FenwickTree(int n) {
+					this->n = n;
+					bit.assign(n, 0);
+			}
+
+			FenwickTree(vector<int> const &a) : FenwickTree(a.size()) {
+					for (size_t i = 0; i < a.size(); i++)
+							add(i, a[i]);
+			}
+
+			int sum(int r) {
+					int ret = 0;
+					for (; r >= 0; r = (r & (r + 1)) - 1)
+							ret += bit[r];
+					return ret;
+			}
+
+			int sum(int l, int r) {
+					return sum(r) - sum(l - 1);
+			}
+
+			void add(int idx, int delta) {
+					for (; idx < n; idx = idx | (idx + 1))
+							bit[idx] += delta;
+			}
+	};
+
+snippet sieve
+	struct sieve {
+		vector<bool> prime;
+		sieve(size_t N = 100) {
+			prime.assign(N + 1, true);
+
+			prime[0] = prime[1] = false;
+			for (int i = 2; i <= N; i++) {
+				for (int j = 2; i * j <= N; j++) {
+					prime[i * j] = false;
+				}
+			}
+		}
+
+		vector<int> primes() {
+			vector<int> result;
+			for (int i = 2; i <= int(prime.size()); i++) {
+				if (prime[i]) result.push_back(i);
+			}
+
+			return result;
+		}
+
+		bool isprime(int n) {
+			return prime[n];
+		}
+
+	} primes($1);
+
+snippet binary_exponentiation
+	const int MOD = INT_MAX;
+	// TODO: update the MOD value.
+	int binary_exponentiation(int A, int B) {
+		A %= MOD;
+		int result = 1;
+		while (B > 0) {
+			if (B & 1)
+				result = result * 1LL * A % MOD;
+			A = A * 1LL * A % MOD;
+			B >>= 1;
+		}
+		return result;
+	}
+
+snippet segment_tree
+	struct Segement_tree {
+		// TODO: check if input overflows int.
+		vector<int> tree;
+
+		Segement_tree(int N = 200200) {
+			tree.resize(4 * N);
+		}
+
+		void build(vector<int> &container, int node, int low, int high) {
+			if (low == high)
+				tree[node] = container[low];
+			else {
+				int mid = low + (high - low) / 2;
+
+				build(container, 2 * node, low, mid);
+				build(container, 2 * node + 1, mid + 1, high);
+
+				tree[node] = tree[2 * node] + tree[2 * node + 1];
+			}
+		}
+
+		int query(int node, int begin, int end, int low, int high) {
+			if (low > high)
+				return 0;
+
+			if (low == begin && high == end)
+				return tree[node];
+
+			int mid = begin + (end - begin) / 2;
+
+			return query(2 * node, begin, mid, low, min(high, mid)) + query(2 * node + 1, mid + 1, end, max(low, mid + 1), high);
+		}
+
+		void update(int node, int begin, int end, int index, int value) {
+			if (begin == end)
+				tree[node] = value;
+			else {
+				int mid = begin + (end - begin) / 2;
+
+				if (index <= mid)
+					update(2 * node, begin, mid, index, value);
+				else 
+					update(2 * node + 1, mid + 1, end, index, value);
+
+				tree[node] = tree[2 * node] + tree[2 * node + 1];
+			}
+		}
+	};
+
+snippet lazy_propogation
+	struct Segement_tree {
+		// TODO: check if input overflows int.
+		vector<int> tree, lazy;
+
+		Segement_tree(int N = 200200) {
+			tree.resize(4 * N);
+			lazy.resize(4 * N);
+		}
+
+		void build(vector<int> &container, int node, int begin, int end) {
+			if (begin == end)
+				tree[node] = container[begin];
+			else {
+				int mid = begin + (end - begin) / 2;
+
+				build(container, 2 * node, begin, mid);
+				build(container, 2 * node + 1, mid + 1, end);
+
+				tree[node] = tree[2 * node] + tree[2 * node + 1];
+			}
+		}
+
+		int64_t query(int node, int begin, int end, int low, int high) {
+			if (lazy[node] != 0) {
+				tree[node] += (end - begin + 1) * lazy[node];
+
+				if (begin != end) {
+					lazy[2 * node] += lazy[node];
+					lazy[2 * node + 1] += lazy[node];
+				}
+
+				lazy[node] = 0;
+			}
+
+			if (end < low || begin > high)
+				return 0;
+
+			if ((low <= begin) && (end <= high))
+				return tree[node];
+
+			int mid = begin + (end - begin) / 2;
+
+			return query(2 * node, begin, mid, low, high) + query(2 * node + 1, mid + 1, end, low, high) + int64_t(0);
+		}
+
+		void update(int node, int begin, int end, int low, int high, int value) {
+			if (lazy[node] != 0) {
+				tree[node] += (end - begin + 1) * lazy[node];
+
+				if (begin != end) {
+					lazy[2 * node] += lazy[node];
+					lazy[2 * node + 1] += lazy[node];
+				}
+
+				lazy[node] = 0;
+			}
+
+			if ((end < low) || (begin > high))
+				return;
+
+			if (begin >= low && end <= high) {
+				tree[node] += (end - begin + 1) * value;
+
+				if (begin != end) {
+					lazy[2 * node] += value;
+					lazy[2 * node + 1] += value;
+				}
+			}
+			else {
+				int mid = begin + (end - begin) / 2;
+
+				update (2 * node, begin, mid, low, high, value);
+				update (2 * node + 1, mid + 1, end, low, high, value);
+
+				tree[node] = tree[2 * node] + tree[2 * node + 1];
+			}
+		}
+	};
+
+snippet kadane
+	int max_subarray_sum(vector<int>& arr) {
+		int max_so_far = INT_MIN, max_ending_here = 0;
+		
+		for (int i = 0; i < (int)arr.size(); i++) {
+			max_ending_here = max_ending_here + arr[i];
+			max_so_far = max(max_so_far, max_ending_here);
+			max_ending_here = max(max_ending_here, 0);
+		}
+
+		return max_so_far;
+	}
+
+snippet kadane_with_k
+	int64_t max_sum_with_k(vector<int64_t>& container, int64_t k) {
+		int n = (int)container.size();
+		vector<int> maxsum(n);
+		int currmax = container[0];
+		maxsum[0] = container[0];
+
+		for (int i = 1; i < n; i++) {
+			currmax = max(container[i], currmax + container[i]);
+			maxsum[i] = currmax;
+		}
+
+		int sum_k = accumulate(container.begin(), container.begin() + k, int64_t(0));
+		int result = sum_k;
+
+		for (int i = k; i < n; i++) {
+			sum_k += container[i] - container[i - k];
+			result = max({result, sum_k, sum_k + maxsum[i - k]});
+		}
+
+		return result;
+	}
+
+snippet direction
+	const vector<pair<int, int>> d4 = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
+	const vector<pair<int, int>> d8 = {{1, 0}, {1, 1}, {0, 1}, {-1, 1}, {-1, 0}, {-1, -1}, {0, -1}, {1, -1}};
+
+snippet sortall
+  sort($1.begin(), $1.end());
+
+snippet ceildiv
+  template<typename T> T ceil(T n, T k) {
+    return n % k == 0 ? n / k : n / k + 1;
+  }
+
+snippet floordiv
+  template<typename T> T floor(T n, T k) {
+    return n % k == 0 ? n / k : n / k - 1;
+  }
+
+snippet outputvector
+	for (int i = 0; i < ${1:N}; i++)
+		cout << ${2:container}[i] << " ";
+
+snippet beginend
+	$1.begin(), $1.end()
