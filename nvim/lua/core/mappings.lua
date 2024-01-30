@@ -1,47 +1,56 @@
-local keymap = vim.keymap.set
+vim.g.mapleader = " "
+local keymap = vim.keymap
 local opts = { silent = true, noremap = true }
 
 -- General
-keymap("n", "<leader>q", ":qa! <CR>", opts)
-keymap("n", "<leader>a", "gg<S-v>G", opts)
-keymap("n", "<leader>ya", ":%y+ <CR>", opts)
-keymap("v", "J", ":m '>+1 <CR> gv=gv", opts)
-keymap("v", "K", ":m '>-2 <CR> gv=gv", opts)
-keymap("v", "<", "<gv", opts)
-keymap("v", ">", ">gv", opts)
-
--- Fugitive
-keymap("n", "<leader>g", ":vertical Git <CR>", opts)
+keymap.set("n", "<leader>q", ":qa! <cr>", opts)
+keymap.set("n", "<leader>a", "gg<S-v>G", opts)
+keymap.set("v", "<", "<gv", opts)
+keymap.set("v", ">", ">gv", opts)
 
 -- Window
-keymap("n", "<C-h>", "<C-w>h", opts)
-keymap("n", "<C-j>", "<C-w>j", opts)
-keymap("n", "<C-k>", "<C-w>k", opts)
-keymap("n", "<C-l>", "<C-w>l", opts)
-keymap("n", "<leader>tn", ":tabnew <CR>", opts)
-keymap("n", "<S-h>", ":BufferLineCyclePrev <CR>", opts)
-keymap("n", "<S-l>", ":BufferLineCycleNext <CR>", opts)
-keymap("n", "<leader>x", ":bd <CR>", opts)
-keymap("n", "<C-Up>", ":resize -2 <CR>", opts)
-keymap("n", "<C-Down>", ":resize +2 <CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2 <CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2 <CR>", opts)
-keymap("n", "<leader>sh", ":split <CR>", opts)
-keymap("n", "<leader>sv", ":vsplit <CR>", opts)
+keymap.set("n", "<C-h>", "<C-w>h", opts)
+keymap.set("n", "<C-j>", "<C-w>j", opts)
+keymap.set("n", "<C-k>", "<C-w>k", opts)
+keymap.set("n", "<C-l>", "<C-w>l", opts)
+keymap.set("n", "<leader>tn", ":tabnew <cr>", opts)
+keymap.set("n", "<S-h>", "<cmd> BufferLineCyclePrev <cr>", opts)
+keymap.set("n", "<S-l>", "<cmd> BufferLineCycleNext <cr>", opts)
+keymap.set("n", "<leader>x", "<cmd> bd <cr>", opts)
+keymap.set("n", "<C-Up>", ":resize -2 <cr>", opts)
+keymap.set("n", "<C-Down>", ":resize +2 <cr>", opts)
+keymap.set("n", "<C-Left>", ":vertical resize -2 <cr>", opts)
+keymap.set("n", "<C-Right>", ":vertical resize +2 <cr>", opts)
+keymap.set("n", "<leader>sh", ":split <cr>", opts)
+keymap.set("n", "<leader>sv", ":vsplit <cr>", opts)
 
--- NvimTree
-keymap("n", "<leader>e", ":NvimTreeToggle toggle <CR>", opts)
+-- Oil.nvim
+keymap.set("n", "<leader>e", function()
+	require("oil").toggle_float()
+end, opts)
 
 -- Telescope
-keymap("n", "<leader>ff", ":Telescope find_files <CR>", opts)
-keymap("n", "<leader>fb", ":Telescope buffers <CR>", opts)
-keymap("n", "<leader>fw", ":Telescope live_grep <CR>", opts)
-keymap("n", "<leader>fh", ":Telescope help_tags  <CR>", opts)
-keymap("n", "<leader>fs", function()
+keymap.set("n", "<leader>ff", "<cmd> Telescope find_files <cr>", opts)
+keymap.set("n", "<leader>fb", "<cmd> Telescope buffers <cr>", opts)
+keymap.set("n", "<leader>fw", "<cmd> Telescope live_grep <cr>", opts)
+keymap.set("n", "<leader>fh", "<cmd> Telescope help_tags  <cr>", opts)
+keymap.set("n", "<leader>fs", function()
 	require("telescope.builtin").find_files({
 		cwd = "/home/lavinraj/coding/cp/code-library/",
 	})
 end, opts)
+keymap.set("n", "<leader>fc", function()
+	require("telescope.builtin").find_files({
+		cwd = "/home/lavinraj/.config/nvim/",
+	})
+end, opts)
 
--- Code formatting
-keymap("n", "<leader>lf", vim.lsp.buf.format, opts)
+-- Spectre
+keymap.set("n", "<leader>s", "<cmd> Spectre <cr>", opts)
+
+-- Fugitive
+keymap.set("n", "<leader>g", ":vertical Git <cr>", opts)
+
+-- build commands
+keymap.set("n", "<leader>r", "<cmd> w <bar> 70vsplit <bar> term dbrun %:p <cr> <insert>")
+keymap.set("n", "<leader>t", "<cmd> w <bar> 70vsplit <bar> term runsamples %:p <cr> <insert>")

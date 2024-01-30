@@ -1,7 +1,7 @@
 import = [
   # uncomment the flavour you want below:
-  # "~/.config/alacritty/catppuccin-mocha.toml"
-  "~/.config/alacritty/catppuccin-macchiato.toml"
+  "~/.config/alacritty/catppuccin-mocha.toml"
+  # "~/.config/alacritty/catppuccin-macchiato.toml"
   # "~/.config/alacritty/catppuccin-frappe.toml"
   # "~/.config/alacritty/catppuccin-latte.toml"
   # "~/.config/alacritty/tokyonight-day.toml"
@@ -15,10 +15,10 @@ program = "/bin/zsh"
 args = ["-l"]
 
 [colors]
-cursor = { text = "#000000", cursor = "#7aa2f7" }
+cursor = { text = "#000000", cursor = "#F8BD96" }
 
 [window]
-dimensions = { columns = 120, lines = 30 }
+dimensions = { columns = 150, lines = 28 }
 padding = { x = 10, y = 10}
 dynamic_padding = false
 title = "a7lavinraj@mark-42"
