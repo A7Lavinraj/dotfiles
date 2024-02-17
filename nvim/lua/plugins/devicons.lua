@@ -1,4 +1,5 @@
-local status, overrides = pcall(require, "base.overrides")
+-- required icons for ui
+local status, overrides = pcall(require, "base.themes.catppuccin")
 if not status then
 	return
 end

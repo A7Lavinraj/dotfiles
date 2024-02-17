@@ -62,9 +62,6 @@ opt.splitright = true
 -- enable guicolors
 opt.termguicolors = true
 
--- keybind mapping sequence
-opt.timeoutlen = 400
-
 -- file recovery
 opt.undofile = true
 

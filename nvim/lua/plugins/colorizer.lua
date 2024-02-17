@@ -1,3 +1,4 @@
+-- colorizer to visualize colors
 return {
 	"NvChad/nvim-colorizer.lua",
 	opts = {

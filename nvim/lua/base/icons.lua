@@ -1,3 +1,4 @@
+-- base icons
 return {
 	misc = {
 		dots = "󰇘",

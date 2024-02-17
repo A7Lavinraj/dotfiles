@@ -29,8 +29,8 @@ return {
 					vertical = {
 						mirror = false,
 					},
-					width = 0.5,
-					height = 0.60,
+					width = 0.4,
+					height = 0.40,
 					preview_cutoff = 120,
 				},
 				hidden = true,

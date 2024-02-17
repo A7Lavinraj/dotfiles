@@ -43,13 +43,3 @@ vim.api.nvim_create_autocmd("TermOpen", {
 		vim.opt_local.number, vim.opt_local.relativenumber = false, false
 	end,
 })
-
--- autocommand for removing backgrounds
-vim.api.nvim_create_autocmd("BufEnter", {
-	pattern = "*",
-	group = Highlight,
-	callback = function()
-		vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-		vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none", fg = "#414050" })
-	end,
-})

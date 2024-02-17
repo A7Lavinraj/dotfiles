@@ -19,15 +19,14 @@ cursor = { text = "#000000", cursor = "#F8BD96" }
 
 [window]
 dimensions = { columns = 150, lines = 28 }
-padding = { x = 10, y = 10}
-dynamic_padding = false
+# padding = { x = 10, y = 10}
 title = "a7lavinraj@mark-42"
 decorations = "none"
-opacity = 0.95
+# opacity = 0.95
 
 [font]
-normal = { family = "MesloLGM Nerd Font", style = "Normal" }
-bold = { family = "MesloLGM Nerd Font", style = "Bold" }
-italic = { family = "MesloLGM Nerd Font", style = "Italic" }
-bold_italic = { family = "MesloLGM Nerd Font", style = "Bold Italic" }
+normal = { family = "MesloLGM Nerd Font Mono", style = "Normal" }
+bold = { family = "MesloLGM Nerd Font Mono", style = "Bold" }
+italic = { family = "MesloLGM Nerd Font Mono", style = "Italic" }
+bold_italic = { family = "MesloLGM Nerd Font Mono", style = "Bold Italic" }
 size = 15

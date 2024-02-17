@@ -44,7 +44,9 @@ return {
 					update_in_insert = false,
 				},
 			},
-			lualine_x = { "filetype" },
+			lualine_x = {
+				"filetype",
+			},
 		},
 	},
 }

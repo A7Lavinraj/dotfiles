@@ -1,37 +1,37 @@
 snippet main1
-	#include <bits/stdc++.h>
-	using namespace std;
+  #include <bits/stdc++.h>
+  using namespace std;
 
-	void testcase() { 
-		$1
-	}
+  void testcase() { 
+			$1
+  }
 
-	int main() {
-		ios_base::sync_with_stdio(false);
-		cin.tie(nullptr);
-		int tests = 1;
-		cin >> tests;
+  int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    int tests = 1;
+    cin >> tests;
 
-		for (int i = 1; i <= tests; i++) {
-			// cout << "Case #" << i << ": ";
-			testcase();
-		}
-		return 0;
-	}
+    for (int i = 1; i <= tests; i++) {
+      // cout << "Case #" << i << ": ";
+      testcase(); cout << '\n';
+    }
+
+    return 0;
+  }
 
 snippet main2
-	#include <bits/stdc++.h>
-	using namespace std;
+  #include <bits/stdc++.h>
+  using namespace std;
 
-	int main() {
-		ios_base::sync_with_stdio(false);
-		cin.tie(nullptr);
+  int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
 
-		$1
-		// cout << "Case #" << i << ": ";
+			$1
 
-		return 0;
-	}
+    return 0;
+  }
 
 snippet generator
 	
