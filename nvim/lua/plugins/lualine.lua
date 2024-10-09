@@ -2,6 +2,10 @@ local function folder()
   return " " .. vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
 end
 
+local function file()
+  return vim.fn.expand("%:t")
+end
+
 return {
   "nvim-lualine/lualine.nvim",
   opts = {
@@ -13,7 +17,7 @@ return {
     sections = {
       lualine_a = { "mode" },
       lualine_b = { "branch", "diff" },
-      lualine_c = {},
+      lualine_c = { file },
       lualine_x = {},
       lualine_y = {},
       lualine_z = { folder },

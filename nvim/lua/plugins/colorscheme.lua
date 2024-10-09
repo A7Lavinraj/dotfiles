@@ -9,6 +9,9 @@ return {
         light = "latte",
         dark = "mocha",
       },
+      no_italic = true,    -- Force no italic
+      no_bold = true,      -- Force no bold
+      no_underline = true, -- Force no underline
       color_overrides = {
         latte = {
           rosewater = "#c14a4a",

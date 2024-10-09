@@ -6,7 +6,7 @@ return {
   },
   opts = {
     view = {
-      width = 50,
+      width = 40,
     },
     renderer = {
       group_empty = true,
