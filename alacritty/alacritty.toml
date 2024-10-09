@@ -1,32 +1,17 @@
-import = [
-  # uncomment the flavour you want below:
-  "~/.config/alacritty/catppuccin-mocha.toml"
-  # "~/.config/alacritty/catppuccin-macchiato.toml"
-  # "~/.config/alacritty/catppuccin-frappe.toml"
-  # "~/.config/alacritty/catppuccin-latte.toml"
-  # "~/.config/alacritty/tokyonight-day.toml"
-  # "~/.config/alacritty/tokyonight-moon.toml"
-  # "~/.config/alacritty/tokyonight-night.toml"
-  # "~/.config/alacritty/tokyonight-storm.toml"
-]
-
 [shell]
-program = "/bin/zsh"
+program = "zsh"
 args = ["-l"]
-
-[colors]
-cursor = { text = "#000000", cursor = "#F8BD96" }
 
 [window]
 dimensions = { columns = 150, lines = 28 }
-# padding = { x = 10, y = 10}
 title = "a7lavinraj@mark-42"
-decorations = "none"
-# opacity = 0.95
+# decorations = "none"
+# opacity = 0.8
 
 [font]
-normal = { family = "MesloLGM Nerd Font Mono", style = "Normal" }
-bold = { family = "MesloLGM Nerd Font Mono", style = "Bold" }
-italic = { family = "MesloLGM Nerd Font Mono", style = "Italic" }
-bold_italic = { family = "MesloLGM Nerd Font Mono", style = "Bold Italic" }
-size = 15
+normal = { family = "SFMono Nerd Font" }
+size = 12
+
+[colors.primary]
+background = '#1d2021'
+foreground = '#ebdbb2'

@@ -1,52 +1,30 @@
-local status, icons = pcall(require, "base.icons")
-if not status then
-	return
+local function folder()
+	return vim.fn.expand("%:h:t")
 end
 
-local watermark = function()
-	return "NeoCode"
-end
-
--- statusline
 return {
 	"nvim-lualine/lualine.nvim",
-	dependencies = { "nvim-tree/nvim-web-devicons" },
 	opts = {
+		theme = "catppuccin",
 		options = {
-			component_separators = { left = "", right = "" },
-			section_separators = { left = "", right = "" },
+			component_separators = " ",
+			section_separators = { left = "", right = "" },
 		},
 		sections = {
-			lualine_a = { watermark },
-			lualine_b = {
-				{
-					"branch",
-					icons_enabled = true,
-					icon = "󰘬",
-				},
-				{
-					"diff",
-					symbols = icons.git,
-				},
-			},
-			lualine_c = {
-				{
-					"diagnostics",
-					sections = { "error", "warn", "info", "hint" },
-					diagnostics_color = {
-						error = "DiagnosticError",
-						warn = "DiagnosticWarn",
-						info = "DiagnosticInfo",
-						hint = "DiagnosticHint",
-					},
-					symbols = icons.diagnostics,
-					colored = true,
-					update_in_insert = false,
-				},
-			},
-			lualine_x = {
-				"filetype",
-			},
+			lualine_a = { "mode" },
+			lualine_b = { "branch", "diff", "diagnostics" },
+			lualine_c = {},
+			lualine_x = {},
+			lualine_y = {},
+			lualine_z = { folder },
+		},
+		inactive_sections = {
+			lualine_a = {},
+			lualine_b = {},
+			lualine_c = {},
+			lualine_x = {},
+			lualine_y = {},
+			lualine_z = {},
 		},
 	},
 }
