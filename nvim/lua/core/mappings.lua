@@ -27,7 +27,7 @@ keymap.set("n", "<leader>sv", ":vsplit <cr>", opts)
 
 -- Oil.nvim
 keymap.set("n", "<leader>e", function()
-	require("oil").toggle_float()
+  require("oil").toggle_float()
 end, opts)
 
 -- Telescope
@@ -36,14 +36,14 @@ keymap.set("n", "<leader>gc", "<cmd> Telescope git_branches <cr>", opts)
 keymap.set("n", "<leader>fw", "<cmd> Telescope live_grep <cr>", opts)
 keymap.set("n", "<leader>fh", "<cmd> Telescope help_tags  <cr>", opts)
 keymap.set("n", "<leader>fs", function()
-	require("telescope.builtin").find_files({
-		cwd = "/home/lavinraj/coding/cp/code-library/",
-	})
+  require("telescope.builtin").find_files({
+    cwd = "/home/lavinraj/coding/cp/code-library/",
+  })
 end, opts)
 keymap.set("n", "<leader>fc", function()
-	require("telescope.builtin").find_files({
-		cwd = "/home/lavinraj/.config/nvim/",
-	})
+  require("telescope.builtin").find_files({
+    cwd = "/home/lavinraj/.config/nvim/",
+  })
 end, opts)
 
 -- formatting
@@ -57,63 +57,63 @@ keymap.set("n", "<leader>g", ":vertical Git <cr>", opts)
 
 -- build commands
 keymap.set(
-	"n",
-	"<leader>rr",
-	"<cmd> w <bar> " .. math.floor(vim.o.columns / 2) .. "vsplit <bar> term dbrun %:p <cr> <insert>",
-	opts
+  "n",
+  "<leader>rr",
+  "<cmd> w <bar> " .. math.floor(vim.o.columns / 2) .. "vsplit <bar> term dbrun %:p <cr> <insert>",
+  opts
 )
 keymap.set(
-	"n",
-	"<leader>rt",
-	"<cmd> w <bar> " .. math.floor(vim.o.columns / 2) .. "vsplit <bar> term runsamples %:p <cr> <insert>",
-	opts
+  "n",
+  "<leader>rt",
+  "<cmd> w <bar> " .. math.floor(vim.o.columns / 2) .. "vsplit <bar> term runsamples %:p <cr> <insert>",
+  opts
 )
 keymap.set(
-	"n",
-	"<leader>rp",
-	"<cmd> w <bar> " .. math.floor(vim.o.columns / 2) .. "vsplit <bar> term ipython3 <cr> <insert>",
-	opts
+  "n",
+  "<leader>rp",
+  "<cmd> w <bar> " .. math.floor(vim.o.columns / 2) .. "vsplit <bar> term ipython3 <cr> <insert>",
+  opts
 )
 
 -- competitive programming
 keymap.set("n", "<leader>p", function()
-	vim.ui.select(
-		{ "codechef contest", "codeforces contest", "codechef problem", "codeforces problem" },
-		{ prompt = "choose mode" },
-		function(mode)
-			if mode == "codechef contest" then
-				vim.ui.input({ prompt = "contest code" }, function(code)
-					if code then
-						vim.system({ "codechef_sample_gen", "contest", code }, { text = true }, function()
-							print("Samples fetched sucessfully!")
-						end)
-					end
-				end)
-			elseif mode == "codeforces contest" then
-				vim.ui.input({ prompt = "contest code" }, function(code)
-					if code then
-						vim.system({ "codeforces_sample_gen", "contest", code }, { text = true }, function()
-							print("Samples fetched sucessfully!")
-						end)
-					end
-				end)
-			elseif mode == "codechef problem" then
-				vim.ui.input({ prompt = "contest code" }, function(code)
-					if code then
-						vim.system({ "codeforces_sample_gen", "problem", code }, { text = true }, function()
-							print("Samples fetched sucessfully!")
-						end)
-					end
-				end)
-			elseif mode == "codeforces problem" then
-				vim.ui.input({ prompt = "contest code" }, function(code)
-					if code then
-						vim.system({ "codeforces_sample_gen", "problem", code }, { text = true }, function()
-							print("Samples fetched sucessfully!")
-						end)
-					end
-				end)
-			end
-		end
-	)
+  vim.ui.select(
+    { "codechef contest", "codeforces contest", "codechef problem", "codeforces problem" },
+    { prompt = "choose mode" },
+    function(mode)
+      if mode == "codechef contest" then
+        vim.ui.input({ prompt = "contest code" }, function(code)
+          if code then
+            vim.system({ "codechef_sample_gen", "contest", code }, { text = true }, function()
+              print("Samples fetched sucessfully!")
+            end)
+          end
+        end)
+      elseif mode == "codeforces contest" then
+        vim.ui.input({ prompt = "contest code" }, function(code)
+          if code then
+            vim.system({ "codeforces_sample_gen", "contest", code }, { text = true }, function()
+              print("Samples fetched sucessfully!")
+            end)
+          end
+        end)
+      elseif mode == "codechef problem" then
+        vim.ui.input({ prompt = "contest code" }, function(code)
+          if code then
+            vim.system({ "codeforces_sample_gen", "problem", code }, { text = true }, function()
+              print("Samples fetched sucessfully!")
+            end)
+          end
+        end)
+      elseif mode == "codeforces problem" then
+        vim.ui.input({ prompt = "contest code" }, function(code)
+          if code then
+            vim.system({ "codeforces_sample_gen", "problem", code }, { text = true }, function()
+              print("Samples fetched sucessfully!")
+            end)
+          end
+        end)
+      end
+    end
+  )
 end, opts)

@@ -10,9 +10,9 @@ return {
     "nvim-telescope/telescope-ui-select.nvim",
   },
   keys = {
-    { "<leader>ff",       "<cmd>Telescope find_files<cr>", silent = true, desc = "Telescope find files" },
-    { "<leader><leader>", "<cmd>Telescope buffers<cr>",    silent = true, desc = "Telescope search buffers" },
-    { "<leader>sh",       "<cmd>Telescope help_tags<cr>",  silent = true, desc = "Telescope search help" },
+    { "<leader>ff", "<cmd>Telescope find_files<cr>", silent = true, desc = "Telescope find files" },
+    { "<leader><leader>", "<cmd>Telescope buffers<cr>", silent = true, desc = "Telescope search buffers" },
+    { "<leader>sh", "<cmd>Telescope help_tags<cr>", silent = true, desc = "Telescope search help" },
     {
       "<leader>fc",
       function()

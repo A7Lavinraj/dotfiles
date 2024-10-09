@@ -1,5 +1,5 @@
 return {
-	"nvim-treesitter/nvim-treesitter",
-	build = "TSUpdate",
-	auto_install = true,
+  "nvim-treesitter/nvim-treesitter",
+  build = "TSUpdate",
+  auto_install = true,
 }
