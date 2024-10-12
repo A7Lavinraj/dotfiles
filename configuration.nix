@@ -113,7 +113,6 @@
     lua-language-server
     jq
     ripgrep
-    tmux
     wl-clipboard
     gtk3
     glib
@@ -124,7 +123,6 @@
     grim
     slurp
     mako
-    wofi
     nwg-look
     dotool
     docker
@@ -163,6 +161,8 @@
   };
   programs.zsh = {
     enable = true;
+    enableAutosuggestions = true;
+    syntaxHighlighting.enable = true;
     promptInit = ''
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
     '';

@@ -40,6 +40,15 @@
     pkgs.clang-tools
     pkgs.nerdfonts
     pkgs.gnumake
+    pkgs.python3
+    pkgs.luarocks
+    pkgs.tree-sitter
+    pkgs.waybar
+    pkgs.hyprpaper
+    pkgs.rofi
+    pkgs.pamixer
+    pkgs.brightnessctl
+    pkgs.killall
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -77,4 +86,7 @@
   programs.neovim.enable = true;
   programs.alacritty.enable = true;
   programs.lazygit.enable = true;
+  programs.tmux = {
+    enable = true;
+  };
 }
