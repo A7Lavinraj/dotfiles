@@ -13,9 +13,12 @@ return {
     opts = {
       defaults = {
         preview = false,
+        prompt_prefix = "  ",
         layout_config = {
           horizontal = {
             prompt_position = "top",
+            width = 0.5,
+            height = 0.5,
           },
         },
       },
@@ -26,7 +29,7 @@ return {
         function()
           require("telescope.builtin").find_files({
             cwd = "~/coding/dotfiles",
-            hidden = false,
+            hidden = true,
           })
         end,
       },
