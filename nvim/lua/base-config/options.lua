@@ -1,0 +1,32 @@
+local opt = vim.opt
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+opt.clipboard = "unnamedplus"
+opt.completeopt = "menu,menuone,noselect"
+opt.expandtab = true
+opt.formatoptions = "jcrolnt"
+opt.ignorecase = true
+opt.inccommand = "split"
+opt.laststatus = 3
+opt.linebreak = true
+opt.mouse = ""
+opt.number = true
+opt.pumblend = 10
+opt.pumheight = 10
+opt.relativenumber = true
+opt.scrolloff = 8
+opt.shiftwidth = 2
+opt.showmode = false
+opt.sidescrolloff = 8
+opt.signcolumn = "yes"
+opt.smartcase = true
+opt.smartindent = true
+opt.splitbelow = true
+opt.splitright = true
+opt.tabstop = 2
+opt.termguicolors = true
+opt.timeoutlen = 300
+opt.undofile = true
+opt.wrap = false
