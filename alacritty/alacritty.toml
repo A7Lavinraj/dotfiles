@@ -1,0 +1,26 @@
+general.import = [ "~/.config/omarchy/current/theme/alacritty.toml" ]
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+normal = { family = "MonoLisa" }
+bold = { family = "MonoLisa" }
+italic = { family = "MonoLisa" }
+bold_italic = { family = "MonoLisa" }
+size = 12
+
+[window]
+padding.x = 14
+padding.y = 14
+decorations = "None"
+
+[keyboard]
+bindings = [
+{ key = "Insert", mods = "Shift", action = "Paste" },
+{ key = "Insert", mods = "Control", action = "Copy" },
+  { key = "Return", mods = "Shift", chars = "\u001B\r" }
+]
+
+[terminal]
+osc52 = "CopyPaste"

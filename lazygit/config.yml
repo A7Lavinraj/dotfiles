@@ -1,0 +1,23 @@
+gui:
+  border: single
+
+  screenMode: half
+
+  filterMode: fuzzy
+
+  spinner:
+    frames:
+      - "⠋"
+      - "⠙"
+      - "⠹"
+      - "⠸"
+      - "⠼"
+      - "⠴"
+      - "⠦"
+      - "⠧"
+      - "⠇"
+      - "⠏"
+
+# git:
+#   log:
+#     showGraph: never
