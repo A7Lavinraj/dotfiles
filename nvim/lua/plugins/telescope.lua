@@ -31,7 +31,7 @@ return {
         "<leader>fc",
         function()
           require("telescope.builtin").find_files({
-            cwd = "~/coding/dotfiles",
+            cwd = "~/workspace/dotfiles",
             hidden = true,
           })
         end,

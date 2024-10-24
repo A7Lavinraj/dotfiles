@@ -7,7 +7,6 @@ return {
   cssls = {},
   lua_ls = {
     settings = {
-      cmd = { "/home/lavin/.nix-profile/bin/lua-language-server" },
       Lua = {
         runtime = { version = "LuaJIT" },
         workspace = {
@@ -24,10 +23,7 @@ return {
     },
   },
   clangd = {
-    cmd = { "/home/lavin/.nix-profile/bin/clangd", "-header-insertion=never" },
-  },
-  bashls = {
-    filetypes = { "sh", "zsh" },
+    cmd = { "clangd", "-header-insertion=never" },
   },
   vimls = {
     filetypes = { "vim" },

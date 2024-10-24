@@ -1,7 +1,7 @@
 return {
-  "assistant.nvim",
+  "Assistant.nvim",
   dependencies = { "stevearc/dressing.nvim" },
-  dir = "~/coding/development/assistant.nvim",
+  dir = "~/workspace/development/assistant.nvim",
   opts = {
     theme = "tokyonight",
     border = true,

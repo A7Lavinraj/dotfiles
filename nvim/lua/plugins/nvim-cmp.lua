@@ -17,7 +17,7 @@ return {
   opts = function()
     local cmp = require("cmp")
     vim.api.nvim_set_hl(0, "CmpGhostText", { link = "Comment", default = true })
-    require("luasnip.loaders.from_snipmate").lazy_load({ paths = { "~/coding/dotfiles/nvim/snippets" } })
+    require("luasnip.loaders.from_snipmate").lazy_load({ paths = { "~/workspace/dotfiles/nvim/snippets" } })
     require("luasnip/loaders/from_vscode").lazy_load()
     return {
       completion = { completeopt = "menu,menuone" },

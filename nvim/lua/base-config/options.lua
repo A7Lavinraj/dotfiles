@@ -7,6 +7,7 @@ opt.clipboard = "unnamedplus"
 opt.completeopt = "menu,menuone,noselect"
 opt.expandtab = true
 opt.formatoptions = "jcrolnt"
+opt.guicursor = ""
 opt.ignorecase = true
 opt.inccommand = "split"
 opt.laststatus = 3

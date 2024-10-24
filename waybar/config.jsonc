@@ -5,11 +5,13 @@
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
-  "height": 30,
+  "height": 32,
   "modules-left": [
+    "hyprland/workspaces"
+  ],
+  "modules-center": [
     "clock"
   ],
-  "modules-center": [],
   "modules-right": [
     "temperature",
     "custom/power_profile",
@@ -17,10 +19,10 @@
     "backlight",
     "pulseaudio",
     "pulseaudio#microphone",
-    "tray",
+    "tray"
   ],
   "hyprland/window": {
-    "format": "{}",
+    "format": "{}"
   },
   "wlr/workspaces": {
     "disable-scroll": true,
@@ -36,17 +38,17 @@
       "7": [],
       "8": [],
       "9": [],
-      "10": [],
-    },
+      "10": []
+    }
   },
   "tray": {
     "icon-size": 15,
-    "spacing": 10,
+    "spacing": 10
   },
   "clock": {
     "format": "{0:%H:%M:%S} {0:%F}",
     "interval": 1,
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "backlight": {
     "device": "intel_backlight",
@@ -58,13 +60,13 @@
     ],
     "on-scroll-up": "brightnessctl set 1%+",
     "on-scroll-down": "brightnessctl set 1%-",
-    "min-length": 6,
+    "min-length": 6
   },
   "battery": {
     "states": {
       "good": 95,
       "warning": 30,
-      "critical": 20,
+      "critical": 20
     },
     "format": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
@@ -82,7 +84,7 @@
       "󰂁",
       "󰂂",
       "󰁹"
-    ],
+    ]
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
@@ -103,8 +105,8 @@
         "",
         "",
         ""
-      ],
-    },
+      ]
+    }
   },
   "pulseaudio#microphone": {
     "format": "{format_source}",
@@ -113,7 +115,7 @@
     "on-click": "pamixer --default-source -t",
     "on-scroll-up": "pamixer --default-source -i 5",
     "on-scroll-down": "pamixer --default-source -d 5",
-    "scroll-step": 5,
+    "scroll-step": 5
   },
   "network": {
     "format-wifi": "  {signalStrength}%",
@@ -121,7 +123,7 @@
     "tooltip-format": "{essid} - {ifname} via {gwaddr} ",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
-    "format-alt": "{ifname}:{essid} {ipaddr}/{cidr}",
+    "format-alt": "{ifname}:{essid} {ipaddr}/{cidr}"
   },
   "bluetooth": {
     "format": " {status}",
@@ -129,6 +131,6 @@
     "format-connected": " {num_connections}",
     "tooltip-format": "{device_alias}",
     "tooltip-format-connected": " {device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}",
-  },
+    "tooltip-format-enumerate-connected": "{device_alias}"
+  }
 }
