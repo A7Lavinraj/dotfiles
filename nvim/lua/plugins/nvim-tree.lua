@@ -14,7 +14,7 @@ return {
       update_root = false,
     },
     view = {
-      width = 30,
+      width = 40,
       preserve_window_proportions = true,
     },
     renderer = {
@@ -35,11 +35,11 @@ return {
         glyphs = {
           default = "󰈚",
           folder = {
-            default = "",
-            empty = "",
-            empty_open = "",
-            open = "",
-            symlink = "",
+            default = "",
+            empty = "",
+            empty_open = "",
+            open = "",
+            symlink = "",
           },
           git = { unmerged = "" },
         },

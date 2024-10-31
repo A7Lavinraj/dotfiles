@@ -1,9 +1,11 @@
 return {
+  gopls = {},
   ts_ls = {},
   jsonls = {},
   pyright = {},
   svelte = {},
   tailwindcss = {},
+  dockerls = {},
   cssls = {},
   lua_ls = {
     settings = {

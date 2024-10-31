@@ -4,6 +4,7 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
 map("n", "<leader>l", "<cmd>Lazy<cr>", { desc = "Open lazy.nvim" })
+map("n", "<leader>cm", "<cmd>Mason<cr>", { desc = "Open Mason.nvim" })
 map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { desc = "Toggle nvim-tree" })
 
 map("n", "<C-h>", "<C-w>h", { desc = "Go to Left Window", remap = true })
@@ -26,7 +27,7 @@ map("v", "<A-k>", ":m '<-2<cr>gv=gv", { desc = "Move Up" })
 map("n", "<leader>a", "<cmd>AssistantToggle<cr>", { desc = "Assistant toggle" })
 
 map({ "i", "n" }, "<esc>", "<cmd>noh<cr><esc>", { desc = "Escape and Clear hlsearch" })
-map("n", "<leader>s", "<cmd>w<cr>", { desc = "Save current buffer" })
 map("n", "<leader>x", "<cmd>bdelete<cr>", { desc = "Delete current buffer" })
 map("n", "<leader>h", "<cmd>split<cr>", { desc = "Horizontal split" })
 map("n", "<leader>v", "<cmd>vsplit<cr>", { desc = "vertical split" })
+map("n", "<c-y>", "<cmd>%y<cr>", { desc = "Yank all buffer" })

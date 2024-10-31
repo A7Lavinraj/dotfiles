@@ -3,8 +3,6 @@ return {
   dependencies = { "stevearc/dressing.nvim" },
   dir = "~/workspace/development/assistant.nvim",
   opts = {
-    theme = "tokyonight",
-    border = true,
     commands = {
       cpp = {
         extension = "cpp",
