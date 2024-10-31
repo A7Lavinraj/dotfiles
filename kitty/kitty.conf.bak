@@ -1,11 +1,12 @@
-font_family  MesloLGS Nerd Font
+font_family FiraCode Nerd Font
 font_size 12
 
-background_opacity         0.95
-background_blur            2
+background_opacity 0.8
+background_blur 2
 dynamic_background_opacity yes
+shell_integration no-cursor
 
 # BEGIN_KITTY_THEME
-# Solarized Dark - Patched
+# Terafox
 include current-theme.conf
 # END_KITTY_THEME
