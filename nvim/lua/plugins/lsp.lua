@@ -2,11 +2,17 @@ return {
   "neovim/nvim-lspconfig",
   event = { "BufReadPre", "BufNewFile" },
   dependencies = {
-    { "williamboman/mason.nvim", config = true },
+    {
+      "williamboman/mason.nvim",
+      keys = {
+        { "<leader>cm", "<cmd>Mason<cr>", desc = "Open mason.nvim" },
+      },
+      config = true,
+    },
     { "j-hui/fidget.nvim", config = true },
   },
   config = function()
-    local signs = { Error = " ", Warn = " ", Hint = "󰠠 ", Info = " " }
+    local signs = { Error = "󰫎", Warn = "󰫎", Hint = "󰫎", Info = "󰫎" }
 
     for type, icon in pairs(signs) do
       local hl = "DiagnosticSign" .. type
@@ -43,11 +49,9 @@ return {
           vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
         end
 
-        map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
-        map("gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
-        map("gI", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
-        map("gl", vim.diagnostic.open_float, "[G]oto [L]ine diagnostic")
-        map("<leader>D", require("telescope.builtin").lsp_type_definitions, "Type [D]efinition")
+        -- map("<leader>gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
+        -- map("<leader>gr", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
+        map("<leader>cd", vim.diagnostic.open_float, "[G]oto [L]ine diagnostic")
         map("<leader>rn", vim.lsp.buf.rename, "[R]e[n]ame")
         map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction", { "n", "x" })
 

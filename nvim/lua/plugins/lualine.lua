@@ -1,5 +1,5 @@
-local function folder()
-  return " " .. vim.fn.fnamemodify(vim.fn.getcwd(), ":t")
+local function clock()
+  return " " .. os.date("%R")
 end
 
 local function file()
@@ -17,15 +17,26 @@ return {
   opts = {
     options = {
       component_separators = " ",
-      section_separators = { left = "", right = "" },
+      -- section_separators = { left = "", right = "" },
+      section_separators = { left = "", right = "" },
     },
     sections = {
       lualine_a = { "mode" },
-      lualine_b = { "branch", "diff" },
+      lualine_b = {
+        { "branch", icon = "" },
+        {
+          "diff",
+          symbols = {
+            added = " ",
+            modified = " ",
+            removed = " ",
+          },
+        },
+      },
       lualine_c = { file },
       lualine_x = {},
       lualine_y = {},
-      lualine_z = { folder },
+      lualine_z = { clock },
     },
     inactive_sections = {
       lualine_a = {},

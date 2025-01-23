@@ -2,6 +2,7 @@
   "layer": "top",
   "position": "top",
   "passthrough": false,
+  "height": 36,
 
   "modules-left": [
     "hyprland/workspaces"
@@ -28,19 +29,20 @@
   },
 
   "network": {
-    "format-wifi": "󰤨  {essid}",
+    "format-wifi": "  {essid} ({signalStrength}%)",
     "format-ethernet": "{ifname}: {ipaddr}/{cidr}",
     "format-linked": "{ifname} (No IP)",
     "format-disconnected": "Disconnected "
   },
 
   "battery": {
-    "format": "{icon} {capacity}",
+    "format": "{icon} {capacity} %",
     "format-icons": ["󰁻", "󰁽", "󰁿", "󰂁", "󰁹"]
   },
 
   "clock": {
     "format": "{:%a, %d. %b  %I:%M:%S %p}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "interval": 1
   }
 }

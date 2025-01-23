@@ -1,3 +1,4 @@
+require("base-config.dev")
 require("base-config.options")
 require("base-config.keymaps")
 require("base-config.autocommands")

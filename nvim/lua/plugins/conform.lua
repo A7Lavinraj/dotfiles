@@ -9,10 +9,11 @@ return {
       typescriptreact = { "prettierd" },
       svelte = { "prettierd" },
       markdown = { "prettierd" },
+      lua = { "stylua" },
+      go = { "gofmt" },
     },
-    format_on_save = {
-      async = false,
-      timeout_ms = 500
-    }
-  }
+    format_after_save = {
+      timeout_ms = 500,
+    },
+  },
 }

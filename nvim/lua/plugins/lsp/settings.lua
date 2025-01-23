@@ -1,4 +1,5 @@
 return {
+  html = {},
   gopls = {},
   ts_ls = {},
   jsonls = {},
@@ -6,6 +7,7 @@ return {
   svelte = {},
   tailwindcss = {},
   dockerls = {},
+  prismals = {},
   cssls = {},
   lua_ls = {
     settings = {

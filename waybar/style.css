@@ -1,18 +1,18 @@
 * {
   font-family: "SF Pro Display";
   font-size: 12px;
-  min-height: 0;
   font-weight: 500;
 }
 
 window#waybar {
   background: transparent;
+  margin: 1rem 0rem;
 }
 
 #waybar .module {
   margin: 0 0.5rem;
   padding: 0 0.5rem;
-  border-radius: 0.2rem;
+  border-radius: 1rem;
 }
 
 button {
@@ -23,26 +23,26 @@ button {
 
 #workspaces button {
   margin: 0 0.2rem 0 0;
+  font-weight: 600;
+  opacity: 0.5;
 }
 
 #workspaces button.active {
-  background-color: #3b4261;
+  opacity: 1;
 }
 
 #clock {
-  background-color: #3b4261;
-  padding: 0 1rem;
-  border-radius: 0.2rem;
+  font-weight: 600;
 }
 
 #battery {
-  background-color: #3b4261;
+  font-weight: 600;
 }
 
 #network {
-  background-color: #3b4261;
+  font-weight: 600;
 }
 
 #pulseaudio {
-  background-color: #3b4261;
+  font-weight: 600;
 }
