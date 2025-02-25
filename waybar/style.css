@@ -1,48 +1,17 @@
 * {
   font-family: "SF Pro Display";
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 window#waybar {
-  background: transparent;
-  margin: 1rem 0rem;
+  background: rgba(26, 27, 38, 0.8);
+  border: 1px solid rgb(122, 162, 247);
+  border-radius: 100px;
 }
 
 #waybar .module {
   margin: 0 0.5rem;
   padding: 0 0.5rem;
   border-radius: 1rem;
-}
-
-button {
-  border: none;
-  border-radius: 0.2rem;
-  color: #f3f3f3;
-}
-
-#workspaces button {
-  margin: 0 0.2rem 0 0;
-  font-weight: 600;
-  opacity: 0.5;
-}
-
-#workspaces button.active {
-  opacity: 1;
-}
-
-#clock {
-  font-weight: 600;
-}
-
-#battery {
-  font-weight: 600;
-}
-
-#network {
-  font-weight: 600;
-}
-
-#pulseaudio {
-  font-weight: 600;
 }

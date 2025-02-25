@@ -1,18 +1,17 @@
-font-family = MesloLGM Nerd Font
+font-family = JetBrainsMono Nerd Font
 font-style = Regular
-font-size = 12
-
-adjust-underline-position = 40%
-adjust-underline-thickness = -60%
-
-cursor-style = bar
-cursor-style-blink = false
-
-theme = ayu
-
-shell-integration = zsh
-shell-integration-features = no-cursor
-
+font-size = 14
+# 
+theme = nightfox
+shell-integration-features = no-cursor,sudo,no-title
+cursor-style = block
+# 
+# mouse-hide-while-typing = true
+# mouse-scroll-multiplier = 2
+# 
+# window-padding-balance = true 
+# window-save-state = always
+# window-colorspace = "display-p3"
 window-decoration = false
-
-background-opacity = 1
+# 
+# keybind = cmd+s>r=reload_config

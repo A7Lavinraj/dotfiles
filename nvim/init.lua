@@ -1,5 +1,2 @@
-require("base-config.dev")
-require("base-config.options")
-require("base-config.keymaps")
-require("base-config.autocommands")
-require("lazy-setup")
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")

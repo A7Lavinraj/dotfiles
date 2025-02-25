@@ -1,6 +1,38 @@
+[colors.primary]
+background = '#222436'
+foreground = '#c8d3f5'
+
+[colors.normal]
+black = '#1b1d2b'
+red = '#ff757f'
+green = '#c3e88d'
+yellow = '#ffc777'
+blue = '#82aaff'
+magenta = '#c099ff'
+cyan = '#86e1fc'
+white = '#828bb8'
+
+[colors.bright]
+black = '#444a73'
+red = '#ff8d94'
+green = '#c7fb6d'
+yellow = '#ffd8ab'
+blue = '#9ab8ff'
+magenta = '#caabff'
+cyan = '#b2ebff'
+white = '#c8d3f5'
+
+[[colors.indexed_colors]]
+index = 16
+color = '#ff966c'
+
+[[colors.indexed_colors]]
+index = 17
+color = '#c53b53'
+
 [font]
-normal.family = "MesloLGM Nerd Font Mono"
-size = 13
+normal.family = "MesloLGM Nerd Font"
+size = 12
 
 [window]
 padding.x = 5
