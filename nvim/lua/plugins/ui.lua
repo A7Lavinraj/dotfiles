@@ -18,6 +18,12 @@ return {
       })
     end,
     opts = {
+      dashboard = {
+        sections = {
+          { section = "header" },
+          { section = "startup" },
+        },
+      },
       picker = {
         layout = "vscode",
       },
