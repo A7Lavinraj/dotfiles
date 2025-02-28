@@ -12,4 +12,4 @@ vim.o.cursorline = false
 vim.o.spell = false
 
 -- enable block cursor
--- vim.o.guicursor = ""
+vim.o.guicursor = ""
