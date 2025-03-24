@@ -1,0 +1,8 @@
+gui:
+  screenMode: half
+  showCommandLog: false
+git:
+  paging:
+    colorArg: always
+    pager: delta --paging=never -n -s
+    useConfig: false
