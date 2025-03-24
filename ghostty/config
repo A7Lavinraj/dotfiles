@@ -1,46 +1,40 @@
-font-family = FiraCode
+font-family = CommitMono
 font-style = Regular
-font-size = 12.5
+font-size = 12
 
 window-padding-x = 0
 window-padding-y = 0
+window-decoration = false
 
 adjust-cell-height = 60%
 
-theme = nightfox
+theme = tokyonight
 
 shell-integration-features = no-cursor,sudo,no-title
 
 cursor-style = block
 
-window-decoration = false
 background-opacity = 0.8
 
-background = #161616
-foreground = #f2f4f8
-selection-background = #2a2a2a
-selection-foreground = #f2f4f8
-cursor-color = #f2f4f8
+palette = 0=#1B1E28
+palette = 1=#D0679D
+palette = 2=#5DE4C7
+palette = 3=#FFFAC2
+palette = 4=#89DDFF
+palette = 5=#BB9AF7
+palette = 6=#89DDFF
+palette = 7=#A6ACCD
+palette = 8=#506477
+palette = 9=#FCC5E9
+palette = 10=#5DE4C7
+palette = 11=#FFFAC2
+palette = 12=#89DDFF
+palette = 13=#C7A9FF
+palette = 14=#ADD7FF
+palette = 15=#C0CAF5
 
-# normal
-palette = 0=#282828
-palette = 1=#ee5396
-palette = 2=#25be6a
-palette = 3=#08bdba
-palette = 4=#78a9ff
-palette = 5=#be95ff
-palette = 6=#33b1ff
-palette = 7=#dfdfe0
-
-# bright
-palette = 8=#484848
-palette = 9=#f16da6
-palette = 10=#46c880
-palette = 11=#2dc7c4
-palette = 12=#8cb6ff
-palette = 13=#c8a5ff
-palette = 14=#52bdff
-palette = 15=#e4e4e5
-
-# extended colors
-palette = 16=#3ddbd9
+background = #1B1E28
+foreground = #E4F0FB
+cursor-color = #A6ACCD
+selection-background = #506477
+selection-foreground = #E4F0FB
