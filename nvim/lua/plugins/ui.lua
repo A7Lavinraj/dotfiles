@@ -17,15 +17,23 @@ return {
         end,
       })
     end,
+    ---@type snacks.Config
     opts = {
+      picker = {
+        layout = {
+          preset = "ivy",
+          fullscreen = true,
+        },
+      },
       dashboard = {
         sections = {
           { section = "header" },
           { section = "startup" },
         },
       },
-      picker = {
-        layout = "vscode",
+      notifier = {
+        style = "compact",
+        top_down = false,
       },
       styles = {
         notification_history = {
@@ -34,14 +42,24 @@ return {
           width = 0.8,
         },
       },
+      win = {
+        backdrop = false,
+      },
     },
     keys = {
       {
-        "<leader>sl",
+        "<leader>n",
         function()
-          Snacks.picker.lines()
+          Snacks.notifier.show_history()
         end,
-        desc = "Search Lines",
+        desc = "Notification History",
+      },
+      {
+        "<s-h>",
+        function()
+          Snacks.picker.buffers()
+        end,
+        desc = "Find Buffers",
       },
       {
         "<leader>fc",
@@ -49,13 +67,6 @@ return {
           Snacks.picker.files({ cwd = "~/workspace/dotfiles", hidden = true })
         end,
         desc = "Find Config",
-      },
-      {
-        "<leader>n",
-        function()
-          Snacks.notifier.show_history()
-        end,
-        desc = "Notification History",
       },
     },
   },
@@ -72,6 +83,12 @@ return {
     },
   },
   {
+    "catppuccin/nvim",
+    opts = {
+      transparent_background = true,
+    },
+  },
+  {
     "folke/noice.nvim",
     opts = {
       presets = {
@@ -82,9 +99,77 @@ return {
   {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
+      default_component_configs = {
+        indent = {
+          with_expanders = false,
+        },
+      },
       window = {
         position = "right",
+        use_float = true,
       },
+      filesystem = {
+        filtered_items = {
+          hide_dotfiles = false,
+          hide_gitignored = false,
+          hide_hidden = false,
+        },
+      },
+    },
+    keys = {
+      {
+        "<leader>e",
+        function()
+          require("neo-tree.command").execute({ toggle = true, position = "current", dir = vim.uv.cwd(), reveal = true })
+        end,
+        { desc = "Toggle neotree (CWD)" },
+      },
+      {
+        "<leader>E",
+        function()
+          require("neo-tree.command").execute({
+            toggle = true,
+            position = "current",
+            dir = LazyVim.root(),
+            reveal = true,
+          })
+        end,
+        { desc = "Toggle neotree (ROOT)" },
+      },
+    },
+  },
+  {
+    "nvim-lualine/lualine.nvim",
+    opts = {
+
+      options = {
+        component_separators = { left = "|", right = "|" },
+        section_separators = { left = "", right = "" },
+      },
+      sections = {
+        lualine_b = { { "branch", icon = "󰘬" } },
+      },
+    },
+  },
+  {
+    "LunarVim/breadcrumbs.nvim",
+    dependencies = {
+      "SmiteshP/nvim-navic",
+    },
+    config = function()
+      require("breadcrumbs").setup()
+      vim.api.nvim_set_hl(0, "WinBar", { link = "Normal" })
+      vim.api.nvim_set_hl(0, "WinBarNC", { link = "Normal" })
+    end,
+  },
+  {
+    "poimandres.nvim",
+    dir = "~/workspace/development/poimandres.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      disable_background = true,
+      disable_float_background = true,
     },
   },
 }
