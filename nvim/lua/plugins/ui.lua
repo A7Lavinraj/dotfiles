@@ -163,8 +163,7 @@ return {
     end,
   },
   {
-    "poimandres.nvim",
-    dir = "~/workspace/development/poimandres.nvim",
+    "A7Lavinraj/poimandres.nvim",
     lazy = false,
     priority = 1000,
     opts = {
