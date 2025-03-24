@@ -1,12 +1,12 @@
 {
   "bar.customModules.updates.pollingInterval": 1440000,
-  "theme.font.name": "MonacoLigaturized",
+  "theme.font.name": "Monaco",
   "theme.font.size": "1rem",
   "theme.font.weight": 400,
   "bar.workspaces.show_numbered": false,
   "bar.workspaces.monitorSpecific": false,
   "theme.bar.menus.background": "#1a1b26",
-  "theme.bar.background": "#1e2030",
+  "theme.bar.background": "#1a1b26",
   "theme.bar.buttons.media.icon": "#bb9af7",
   "theme.bar.buttons.media.text": "#bb9af7",
   "theme.bar.buttons.icon": "#ffffff",
@@ -448,4 +448,3 @@
   "bar.workspaces.ignored": "-.*",
   "bar.windowtitle.class_name": false
 }
-
