@@ -1,40 +1,17 @@
-font-family = CommitMono
+font-family = Monolisa Trial
 font-style = Regular
-font-size = 12
+font-size = 13
 
 window-padding-x = 0
 window-padding-y = 0
+window-padding-balance = true
+window-padding-color = extend
 window-decoration = false
 
-adjust-cell-height = 60%
-
-theme = tokyonight
+adjust-cell-height = 20%
 
 shell-integration-features = no-cursor,sudo,no-title
 
 cursor-style = block
 
-background-opacity = 0.8
-
-palette = 0=#1B1E28
-palette = 1=#D0679D
-palette = 2=#5DE4C7
-palette = 3=#FFFAC2
-palette = 4=#89DDFF
-palette = 5=#BB9AF7
-palette = 6=#89DDFF
-palette = 7=#A6ACCD
-palette = 8=#506477
-palette = 9=#FCC5E9
-palette = 10=#5DE4C7
-palette = 11=#FFFAC2
-palette = 12=#89DDFF
-palette = 13=#C7A9FF
-palette = 14=#ADD7FF
-palette = 15=#C0CAF5
-
-background = #1B1E28
-foreground = #E4F0FB
-cursor-color = #A6ACCD
-selection-background = #506477
-selection-foreground = #E4F0FB
+theme = tokyonight

@@ -252,7 +252,7 @@ plugins {
     }
 }
 
-theme "rose-pine"
+theme "gruvbox-dark"
 
 themes {
   rose-pine {

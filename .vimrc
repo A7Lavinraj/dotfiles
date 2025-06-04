@@ -27,6 +27,7 @@ let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
 call plug#begin() 
+Plug 'ghifarit53/tokyonight.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
