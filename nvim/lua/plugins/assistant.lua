@@ -11,7 +11,6 @@ return {
     return {
       ui = {
         diff_mode = true,
-        title_components_separator = "",
       },
       mappings = {
         panel = {

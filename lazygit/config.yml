@@ -1,5 +1,4 @@
 gui:
-  screenMode: half
   showCommandLog: false
 git:
   paging:

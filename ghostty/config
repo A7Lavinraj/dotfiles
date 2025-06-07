@@ -1,6 +1,6 @@
 font-family = Monolisa Trial
 font-style = Regular
-font-size = 13
+font-size = 12
 
 window-padding-x = 0
 window-padding-y = 0
@@ -8,7 +8,7 @@ window-padding-balance = true
 window-padding-color = extend
 window-decoration = false
 
-adjust-cell-height = 20%
+adjust-cell-height = 40%
 
 shell-integration-features = no-cursor,sudo,no-title
 

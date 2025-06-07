@@ -9,6 +9,7 @@ return {
       },
       on_highlights = function(hl, c)
         local prompt = "#292e42"
+        hl.FloatBorder = { fg = prompt }
         hl.TelescopeNormal = { fg = c.fg_dark }
         hl.TelescopeBorder = { fg = prompt }
         hl.TelescopePromptBorder = { fg = prompt }

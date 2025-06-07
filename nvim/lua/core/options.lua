@@ -47,7 +47,7 @@ local options = {
   scrolloff = 8,
 
   -- fat cursor
-  guicursor = "",
+  -- guicursor = "",
 }
 
 for key, value in pairs(options) do

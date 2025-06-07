@@ -1,6 +1,6 @@
 {
   "bar.customModules.updates.pollingInterval": 1440000,
-  "theme.font.name": "Monaco",
+  "theme.font.name": "Monolisa Trial",
   "theme.font.size": "1rem",
   "theme.font.weight": 400,
   "bar.workspaces.show_numbered": false,
@@ -501,5 +501,8 @@
   "theme.bar.buttons.network.enableBorder": false,
   "bar.network.showWifiInfo": true,
   "bar.network.truncation": false,
-  "theme.bar.buttons.bluetooth.enableBorder": false
+  "theme.bar.buttons.bluetooth.enableBorder": false,
+  "bar.customModules.storage.paths": [
+    "/"
+  ]
 }

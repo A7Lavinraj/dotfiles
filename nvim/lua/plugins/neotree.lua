@@ -3,8 +3,8 @@ return {
   branch = "v3.x",
   dependencies = {
     "nvim-lua/plenary.nvim",
-    "echasnovski/mini.icons",
     "MunifTanjim/nui.nvim",
+    "echasnovski/mini.icons",
   },
   lazy = false,
   ---@module 'neo-tree'

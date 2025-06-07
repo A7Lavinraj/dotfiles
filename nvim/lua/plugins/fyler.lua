@@ -1,9 +1,11 @@
 return {
   dir = "~/workspace/development/fyler.nvim",
+  lazy = false,
   opts = {
-    close_on_open = true,
-    window_config = {
-      width = 0.4,
-    },
+    default_explorer = true,
+  },
+  cmd = "Fyler",
+  keys = {
+    { "<leader>fo", "<cmd>Fyler<cr>", desc = "fyler.nvim" },
   },
 }

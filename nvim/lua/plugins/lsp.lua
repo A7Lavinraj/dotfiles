@@ -6,7 +6,6 @@ return {
       { "WhoIsSethDaniel/mason-tool-installer.nvim" },
       { "saghen/blink.cmp" },
       { "mason-org/mason.nvim", opts = {} },
-      { "j-hui/fidget.nvim", opts = {} },
       {
         "folke/lazydev.nvim",
         ft = "lua",
