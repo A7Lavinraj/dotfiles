@@ -4,4 +4,4 @@ format = "$directory$git_branch$line_break$time$character"
 truncate_to_repo = false
 
 [git_branch]
-symbol = ' '
+symbol = '󰘬 '
