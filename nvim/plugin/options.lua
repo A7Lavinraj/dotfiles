@@ -1,53 +1,40 @@
-local opt = vim.opt
+local set = vim.opt
 
-opt.clipboard = "unnamedplus"
-opt.expandtab = true
+-- Clipboard
+set.clipboard = "unnamedplus"
 
--- Better search settings
-opt.ignorecase = true
-opt.smartcase = true
-
--- Opens up a split window for selections
-opt.inccommand = "split"
-
-opt.fillchars = { eob = " " }
+-- Enable numbers and relative numbers
+set.number = true
+set.relativenumber = true
 
 -- Disable highlight search
-opt.hlsearch = false
+set.hlsearch = false
 
--- Global statusline
-opt.laststatus = 3
+-- Custom statusline
+set.laststatus = 3
+set.statusline = "%#Conceal#█ %F%#Normal#"
 
--- Enable numbers with relative numbers
-opt.number = true
-opt.relativenumber = true
+-- Global indentation
+set.expandtab = true
+set.shiftwidth = 2
+set.tabstop = 2
 
--- Indentation (I prefer "2" spaces of indent)
-opt.shiftwidth = 2
-opt.tabstop = 2
+-- No wrap
+set.wrap = false
 
--- Allow signcolumn for various indicators
-opt.signcolumn = "yes"
+-- Cursor margin from top-bottom
+set.scrolloff = 10
 
--- Always open a split in below + right direction
-opt.splitbelow = true
-opt.splitright = true
+-- Enable signcolumn
+set.signcolumn = "yes"
 
--- Disable swap files
-opt.swapfile = false
+-- splits
+set.splitright = true
+set.splitbelow = true
 
--- Enable undofile
-opt.undofile = true
+-- Search
+set.ignorecase = true
+set.smartcase = true
 
--- Disable line wrapping
-opt.wrap = false
-
-opt.linebreak = true
-
-opt.scrolloff = 10
-
--- disable some default providers
-vim.g.loaded_node_provider = 0
-vim.g.loaded_python3_provider = 0
-vim.g.loaded_perl_provider = 0
-vim.g.loaded_ruby_provider = 0
+-- No swap files
+set.swapfile = false
